@@ -44,7 +44,7 @@ def dict_to_mermaid(data, parent='A'):
 
 
 def main():
-    st.title("Multiplication Router with Mermaid Visualization")
+    st.title("Cognitive Multiplication Router")
 
     # Get user input
     num1 = st.number_input("Enter the first number:", value=1)
