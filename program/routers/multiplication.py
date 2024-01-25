@@ -37,8 +37,6 @@ class Case1(BaseCase):
             user=str(self.num1)
         )
         num1_digits = json.loads(response)
-        print(
-            f"Splitting {self.num1}*{self.num2} into ({num1_digits[0]}*{self.num2})*10 and {num1_digits[1]}*{self.num2}.")
 
         r1 = MultiplicationRouter(num1_digits[0], self.num2)
         eq1 = r1.exec() * 10
@@ -69,8 +67,6 @@ class Case2(BaseCase):
             user=str(self.num2)
         )
         num2_digits = json.loads(response)
-        print(
-            f"Splitting {self.num1}*{self.num2} into ({self.num1}*{num2_digits[0]})*10 and {self.num1}*{num2_digits[1]}.")
 
         r1 = MultiplicationRouter(self.num1, num2_digits[0])
         eq1 = r1.exec() * 10
